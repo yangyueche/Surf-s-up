@@ -4,7 +4,12 @@
   "description": "",
   "main": "./src/bot.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/bot.js",
+    "ts:start": "ts-node src/bot.ts",
+    "dev": "cross-env NODE_ENV=development ts-node-dev src/bot.ts",
+    "build": "tsc",
+    "postinstall": "yarn build",
+    "gen:types": "graphql-codegen --config codegen.js"
   },
   "keywords": [],
   "author": "",
