@@ -21,6 +21,7 @@
     "dotenv": "^16.0.1",
     "moment": "^2.29.4",
     "puppeteer": "^15.5.0",
+    "ts-node": "^10.9.1",
     "wokcommands": "^1.5.3"
   },
   "devDependencies": {
