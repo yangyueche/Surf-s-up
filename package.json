@@ -1,0 +1,29 @@
+{
+  "name": "surfs-up",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/bot.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/builders": "^1.1.0",
+    "@discordjs/rest": "^1.0.1",
+    "@types/aws-sdk": "^2.7.0",
+    "@types/cron": "^2.0.0",
+    "@types/node-cron": "^3.0.2",
+    "cron": "^2.1.0",
+    "discord-api-types": "^0.37.0",
+    "discord.js": "^14.1.2",
+    "dotenv": "^16.0.1",
+    "moment": "^2.29.4",
+    "puppeteer": "^15.5.0",
+    "wokcommands": "^1.5.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  }
+}
