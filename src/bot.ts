@@ -76,7 +76,7 @@ async function webCrawler(surfSpotData: surfSpotData) {
     await page.goto(surfSpot.url, {
       waitUntil: 'domcontentloaded',
     })
-    await page.waitForTimeout(5000)
+    await page.waitForTimeout(7000)
     await page.waitForSelector(
       '#surf-forecast > div.forecast-section > div.forecast-embed.w-embed.w-iframe > iframe'
     )
@@ -95,7 +95,7 @@ async function webCrawler(surfSpotData: surfSpotData) {
     )
 
     await frame.click('#forecast > div.tabs-menu.w-tabs-menu > a:nth-child(2)')
-    await page.waitForTimeout(1000)
+    await page.waitForTimeout(3000)
 
     const forecastChart = await frame?.$('#forecast')
 
