@@ -4,7 +4,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { CronJob, timeout } from 'cron'
 import moment from 'moment'
-import puppteer from 'puppeteer'
+import puppeteer from 'puppeteer'
 import { EmbedBuilder } from '@discordjs/builders'
 import { data } from './surfSpotData.json'
 import { uploadFile } from './utils/s3'
@@ -67,7 +67,9 @@ client.on('interactionCreate', async (interaction: Interaction) => {
 client.login(config.DISCORD_TOKEN)
 
 async function webCrawler(surfSpotData: surfSpotData) {
-  const browser = await puppteer.launch()
+  const browser = await puppeteer.launch({
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  })
 
   for await (const surfSpot of surfSpotData) {
     const page = await browser.newPage()
