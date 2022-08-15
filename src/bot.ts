@@ -23,7 +23,7 @@ type surfSpotData = {
 client.once('ready', async () => {
   console.log('Bot Running...')
   // const fetchSwelleyeChart = new CronJob(
-  //   '0 07 18 * * *',
+  //   '00 48 10 * * *',
   //   async function () {
   try {
     let surfSpotData: surfSpotData = data.map((surfSpot) => {
@@ -43,7 +43,7 @@ client.once('ready', async () => {
     console.error(e)
   }
   return
-  // },
+  //   },
   //   null,
   //   true,
   //   'Asia/Taipei'
@@ -76,7 +76,7 @@ async function webCrawler(surfSpotData: surfSpotData) {
     await page.goto(surfSpot.url, {
       waitUntil: 'domcontentloaded',
     })
-    await page.waitForTimeout(7000)
+    await page.waitForTimeout(4000)
     await page.waitForSelector(
       '#surf-forecast > div.forecast-section > div.forecast-embed.w-embed.w-iframe > iframe'
     )
@@ -131,8 +131,6 @@ async function webCrawler(surfSpotData: surfSpotData) {
     }
     surfSpot.tide = tideValues
 
-    await page.close()
-
     const file = {
       path: `./src/static/${moment().format('MMMDoYY')}${surfSpot.name}.png`,
       filename: `forecast-screenshot/${moment().format('MMMDoYY')}${
@@ -150,12 +148,13 @@ async function webCrawler(surfSpotData: surfSpotData) {
     fs.unlinkSync(
       `./src/static/${moment().format('MMMDoYY')}${surfSpot.name}.png`
     )
-
+    await page.waitForTimeout(1000)
     surfSpot.s3 = uploadedFile
+
+    await page.close()
   }
 
   await browser.close()
-
   return
 }
 
@@ -174,10 +173,14 @@ async function sendSwellEyeEmbed(
       return { name: tide[0], value: tide[1], inline: true }
     })
 
+    const channel = client.channels.cache.get(
+      surfSpot.discordChannel
+    ) as TextChannel
+
     const swellEyeEmbed = new EmbedBuilder()
       .setColor(0x095c47)
       .setTitle(
-        `${moment().add(1, 'days').format('MMM Do')} ${surfSpot.name} 預報：`
+        `${moment().add(1, 'days').format('MMM Do')} ${channel.name} 預報：`
       )
       .setURL(surfSpot.url)
       .setAuthor({
@@ -196,11 +199,18 @@ async function sendSwellEyeEmbed(
           'https://swelleye.com/av/img/opengraph-3dee2d0f576b24c52d55.png',
       })
 
-    const channel = client.channels.cache.get(
-      surfSpot.discordChannel
-    ) as TextChannel
-    await channel.send({
-      embeds: [swellEyeEmbed],
-    })
+    await channel
+      .send({
+        embeds: [swellEyeEmbed],
+      })
+      .then((message) => {
+        message.pin()
+      })
+      .catch((e) => {
+        throw {
+          name: 'errorOnSendEmbed',
+          message: 'something went wrong whne sending embed.',
+        }
+      })
   }
 }
