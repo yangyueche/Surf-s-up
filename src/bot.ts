@@ -22,32 +22,32 @@ type surfSpotData = {
 
 client.once('ready', async () => {
   console.log('Bot Running...')
-  const fetchSwelleyeThenSendEmbed = new CronJob(
-    '00 48 10 * * *',
-    async function () {
-      try {
-        let surfSpotData: surfSpotData = data.map((surfSpot) => {
-          return {
-            discordChannel: surfSpot.discordChannel,
-            name: surfSpot.name,
-            url: surfSpot.url,
-            tide: [],
-            s3: { ETag: '', Location: '', key: '', Key: '', Bucket: '' },
-          }
-        })
-
-        await webCrawler(surfSpotData)
-        await sendSwellEyeEmbed(surfSpotData, client)
-        console.log('Forecast Sent!')
-      } catch (e) {
-        console.error(e)
+  // const fetchSwelleyeThenSendEmbed = new CronJob(
+  //   '00 48 10 * * *',
+  //   async function () {
+  try {
+    let surfSpotData: surfSpotData = data.map((surfSpot) => {
+      return {
+        discordChannel: surfSpot.discordChannel,
+        name: surfSpot.name,
+        url: surfSpot.url,
+        tide: [],
+        s3: { ETag: '', Location: '', key: '', Key: '', Bucket: '' },
       }
-      return
-    },
-    null,
-    true,
-    'Asia/Taipei'
-  )
+    })
+
+    await webCrawler(surfSpotData)
+    await sendSwellEyeEmbed(surfSpotData, client)
+    console.log('Forecast Sent!')
+  } catch (e) {
+    console.error(e)
+  }
+  return
+  //   },
+  //   null,
+  //   true,
+  //   'Asia/Taipei'
+  // )
 })
 
 client.on('interactionCreate', async (interaction: Interaction) => {
