@@ -23,7 +23,7 @@ type surfSpotData = {
 client.once('ready', async () => {
   console.log('Bot Running...')
   const fetchSwelleyeThenSendEmbed = new CronJob(
-    '00 05 01,02,03 * * *',
+    '00 55 10,11 * * *',
     async function () {
       try {
         let surfSpotData: surfSpotData = data.map((surfSpot) => {
