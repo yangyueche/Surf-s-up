@@ -23,7 +23,7 @@ type surfSpotData = {
 client.once('ready', async () => {
   console.log('Bot Running...')
   const fetchSwelleyeThenSendEmbed = new CronJob(
-    '00 23 00 * * *',
+    '00 36 00 * * *',
     async function () {
       try {
         let surfSpotData: surfSpotData = data.map((surfSpot) => {
@@ -68,6 +68,7 @@ client.login(config.DISCORD_TOKEN)
 
 async function webCrawler(surfSpotData: surfSpotData) {
   const browser = await puppeteer.launch({
+    headless: false,
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
   })
 
@@ -95,7 +96,7 @@ async function webCrawler(surfSpotData: surfSpotData) {
     )
 
     await frame.click('#forecast > div.tabs-menu.w-tabs-menu > a:nth-child(2)')
-    await page.waitForTimeout(3000)
+    await page.waitForTimeout(5000)
 
     const forecastChart = await frame?.$('#forecast')
 
@@ -106,7 +107,7 @@ async function webCrawler(surfSpotData: surfSpotData) {
       }
     }
     await forecastChart.screenshot({
-      path: `./src/static/${moment().format('MMMDoYY')}${surfSpot.name}.png`,
+      path: `./src/static/${moment().format('MMMDoYYh')}${surfSpot.name}.png`,
     })
 
     // grab tide value
@@ -133,7 +134,7 @@ async function webCrawler(surfSpotData: surfSpotData) {
 
     const file = {
       path: `./src/static/${moment().format('MMMDoYY')}${surfSpot.name}.png`,
-      filename: `forecast-screenshot/${moment().format('MMMDoYY')}${
+      filename: `forecast-screenshot/${moment().format('MMMDoYYh')}${
         surfSpot.name
       }.png`,
     }
