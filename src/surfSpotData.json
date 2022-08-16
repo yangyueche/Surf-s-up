@@ -1,21 +1,6 @@
 {
   "data": [
     {
-      "name": "shalun",
-      "url": "https://swelleye.com/surf-spots/shalun/",
-      "discordChannel": "948488990728785920"
-    },
-    {
-      "name": "baishawan",
-      "url": "https://swelleye.com/surf-spots/baishawan/",
-      "discordChannel": "948489052309577788"
-    },
-    {
-      "name": "restaurants",
-      "url": "https://swelleye.com/surf-spots/restaurants/",
-      "discordChannel": "948489147960660008"
-    },
-    {
       "name": "jinshan",
       "url": "https://swelleye.com/surf-spots/jinshan/",
       "discordChannel": "948489160505835520"
@@ -29,6 +14,21 @@
       "name": "wanli",
       "url": "https://swelleye.com/surf-spots/wanli/",
       "discordChannel": "948489173805965312"
+    },
+    {
+      "name": "shalun",
+      "url": "https://swelleye.com/surf-spots/shalun/",
+      "discordChannel": "948488990728785920"
+    },
+    {
+      "name": "baishawan",
+      "url": "https://swelleye.com/surf-spots/baishawan/",
+      "discordChannel": "948489052309577788"
+    },
+    {
+      "name": "restaurants",
+      "url": "https://swelleye.com/surf-spots/restaurants/",
+      "discordChannel": "948489147960660008"
     },
     {
       "name": "fulong",
