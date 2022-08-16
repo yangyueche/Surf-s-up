@@ -23,7 +23,7 @@ type surfSpotData = {
 client.once('ready', async () => {
   console.log('Bot Running...')
   const fetchSwelleyeThenSendEmbed = new CronJob(
-    '00 36 00 * * *',
+    '00 45 00 * * *',
     async function () {
       try {
         let surfSpotData: surfSpotData = data.map((surfSpot) => {
@@ -68,7 +68,6 @@ client.login(config.DISCORD_TOKEN)
 
 async function webCrawler(surfSpotData: surfSpotData) {
   const browser = await puppeteer.launch({
-    headless: false,
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
   })
 
@@ -133,7 +132,7 @@ async function webCrawler(surfSpotData: surfSpotData) {
     surfSpot.tide = tideValues
 
     const file = {
-      path: `./src/static/${moment().format('MMMDoYY')}${surfSpot.name}.png`,
+      path: `./src/static/${moment().format('MMMDoYYh')}${surfSpot.name}.png`,
       filename: `forecast-screenshot/${moment().format('MMMDoYYh')}${
         surfSpot.name
       }.png`,
@@ -145,9 +144,9 @@ async function webCrawler(surfSpotData: surfSpotData) {
         message: 'something went wrong when uploading to s3',
       }
     })
-
+    console.log(`stored ${surfSpot.name}`)
     fs.unlinkSync(
-      `./src/static/${moment().format('MMMDoYY')}${surfSpot.name}.png`
+      `./src/static/${moment().format('MMMDoYYh')}${surfSpot.name}.png`
     )
     await page.waitForTimeout(1000)
     surfSpot.s3 = uploadedFile
