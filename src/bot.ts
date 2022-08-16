@@ -55,7 +55,7 @@ client.on('interactionCreate', async (interaction: Interaction) => {
 
   const { commandName } = interaction
 
-  if (commandName === 'ping') {
+  if (commandName === 'pingg') {
     await interaction.reply('Pong!')
   } else if (commandName === 'server') {
     await interaction.reply('Server info.')
