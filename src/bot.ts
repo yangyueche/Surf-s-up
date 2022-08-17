@@ -18,12 +18,13 @@ type surfSpotData = {
   name: string
   url: string
   tide: (string[] | undefined)[]
+  zhname: string
 }[]
 
 client.once('ready', async () => {
   console.log('Bot Running...')
   const fetchSwelleyeThenSendEmbed = new CronJob(
-    '00 55 10,11 * * *',
+    '00 00 21 * * *',
     async function () {
       try {
         let surfSpotData: surfSpotData = data.map((surfSpot) => {
@@ -33,6 +34,7 @@ client.once('ready', async () => {
             url: surfSpot.url,
             tide: [],
             s3: { ETag: '', Location: '', key: '', Key: '', Bucket: '' },
+            zhname: surfSpot['zh-name'],
           }
         })
 
@@ -180,7 +182,7 @@ async function sendSwellEyeEmbed(
     const swellEyeEmbed = new EmbedBuilder()
       .setColor(0x095c47)
       .setTitle(
-        `${moment().add(1, 'days').format('MMM Do')} ${channel.name} 預報：`
+        `${moment().add(1, 'days').format('MMM Do')} ${surfSpot.zhname} 預報：`
       )
       .setURL(surfSpot.url)
       .setAuthor({
@@ -202,9 +204,6 @@ async function sendSwellEyeEmbed(
     await channel
       .send({
         embeds: [swellEyeEmbed],
-      })
-      .then((message) => {
-        message.pin()
       })
       .catch((e) => {
         throw {

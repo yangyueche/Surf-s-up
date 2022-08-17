@@ -1,214 +1,256 @@
 {
   "data": [
     {
-      "name": "jinshan",
-      "url": "https://swelleye.com/surf-spots/jinshan/",
-      "discordChannel": "948489160505835520"
-    },
-    {
-      "name": "greenbay",
-      "url": "https://swelleye.com/surf-spots/greenbay/",
-      "discordChannel": "948489214398439454"
-    },
-    {
-      "name": "wanli",
-      "url": "https://swelleye.com/surf-spots/wanli/",
-      "discordChannel": "948489173805965312"
-    },
-    {
       "name": "shalun",
+      "zh-name": "沙崙",
       "url": "https://swelleye.com/surf-spots/shalun/",
-      "discordChannel": "948488990728785920"
+      "discordChannel": "1009389649090842776"
     },
     {
       "name": "baishawan",
+      "zh-name": "白沙灣",
       "url": "https://swelleye.com/surf-spots/baishawan/",
-      "discordChannel": "948489052309577788"
+      "discordChannel": "1009389649090842776"
     },
     {
       "name": "restaurants",
+      "zh-name": "餐廳",
       "url": "https://swelleye.com/surf-spots/restaurants/",
-      "discordChannel": "948489147960660008"
+      "discordChannel": "1009389649090842776"
+    },
+    {
+      "name": "jinshan",
+      "zh-name": "金山",
+      "url": "https://swelleye.com/surf-spots/jinshan/",
+      "discordChannel": "1009389649090842776"
+    },
+    {
+      "name": "greenbay",
+      "zh-name": "翡翠灣",
+      "url": "https://swelleye.com/surf-spots/greenbay/",
+      "discordChannel": "1009389649090842776"
+    },
+    {
+      "name": "wanli",
+      "zh-name": "萬里",
+      "url": "https://swelleye.com/surf-spots/wanli/",
+      "discordChannel": "1009389649090842776"
     },
     {
       "name": "fulong",
+      "zh-name": "福隆",
       "url": "https://swelleye.com/surf-spots/fulong/",
-      "discordChannel": "948489342958063646"
+      "discordChannel": "1009389649090842776"
     },
     {
       "name": "daxi",
+      "zh-name": "大溪",
       "url": "https://swelleye.com/surf-spots/daxi/",
-      "discordChannel": "948489375119994941"
+      "discordChannel": "1009074553009479710"
     },
     {
       "name": "gengfang",
+      "zh-name": "梗枋",
       "url": "https://swelleye.com/surf-spots/gengfang/",
-      "discordChannel": "948489397626626078"
+      "discordChannel": "1009074553009479710"
     },
     {
       "name": "double-lions",
+      "zh-name": "雙獅",
       "url": "https://swelleye.com/surf-spots/double-lions/",
-      "discordChannel": "948489474462068766"
+      "discordChannel": "1009074553009479710"
     },
     {
       "name": "waiao",
+      "zh-name": "外澳",
       "url": "https://swelleye.com/surf-spots/waiao/",
-      "discordChannel": "948489488357789716"
+      "discordChannel": "1009074553009479710"
     },
     {
       "name": "wushi-north",
+      "zh-name": "烏石港（北堤）",
       "url": "https://swelleye.com/surf-spots/wushi-north/",
-      "discordChannel": "948489529134841856"
+      "discordChannel": "1009074553009479710"
     },
     {
       "name": "wushi-south",
+      "zh-name": "烏石港（南堤）",
       "url": "https://swelleye.com/surf-spots/wushi-south/",
-      "discordChannel": "948489710794326036"
+      "discordChannel": "1009074553009479710"
     },
     {
       "name": "choushui",
+      "zh-name": "臭水",
       "url": "https://swelleye.com/surf-spots/choushui/",
-      "discordChannel": "948489853199335446"
+      "discordChannel": "1009074553009479710"
     },
     {
       "name": "zhuan",
+      "zh-name": "竹安",
       "url": "https://swelleye.com/surf-spots/zhuan/",
-      "discordChannel": "948489914968838205"
+      "discordChannel": "1009074553009479710"
     },
     {
       "name": "qingshui",
+      "zh-name": "清水",
       "url": "https://swelleye.com/surf-spots/qingshui/",
-      "discordChannel": "948489926905847818"
+      "discordChannel": "1009074553009479710"
     },
     {
       "name": "wuwei",
+      "zh-name": "蘇澳-無尾港",
       "url": "https://swelleye.com/surf-spots/wuwei/",
-      "discordChannel": "948489945914433596"
+      "discordChannel": "1009074553009479710"
     },
     {
       "name": "environmental-park",
+      "zh-name": "環保公園",
       "url": "https://swelleye.com/surf-spots/environmental-park/",
-      "discordChannel": "948490638444363816"
+      "discordChannel": "1009391209191583754"
     },
     {
       "name": "beibin",
+      "zh-name": "北濱",
       "url": "https://swelleye.com/surf-spots/beibin/",
-      "discordChannel": "948490668928540672"
+      "discordChannel": "1009391209191583754"
     },
     {
       "name": "double-bridge",
+      "zh-name": "雙橋",
       "url": "https://swelleye.com/surf-spots/double-bridge/",
-      "discordChannel": "948490684132913182"
+      "discordChannel": "1009391209191583754"
     },
     {
       "name": "gongs",
+      "zh-name": "鹽寮漁港",
       "url": "https://swelleye.com/surf-spots/gongs/",
-      "discordChannel": "948490709462310943"
+      "discordChannel": "1009391209191583754"
     },
     {
       "name": "jiqi",
+      "zh-name": "磯崎",
       "url": "https://swelleye.com/surf-spots/jiqi/",
-      "discordChannel": "948490774276866058"
+      "discordChannel": "1009391209191583754"
     },
     {
       "name": "eight-immortals-cave",
+      "zh-name": "八仙洞",
       "url": "https://swelleye.com/surf-spots/eight-immortals-cave/",
-      "discordChannel": "948490889968386048"
+      "discordChannel": "1009390158090616873"
     },
     {
       "name": "yiwan",
+      "zh-name": "宜灣",
       "url": "https://swelleye.com/surf-spots/yiwan/",
-      "discordChannel": "948490911694864384"
+      "discordChannel": "1009390158090616873"
     },
     {
       "name": "chenggong",
+      "zh-name": "成功",
       "url": "https://swelleye.com/surf-spots/chenggong/",
-      "discordChannel": "948490938106404874"
+      "discordChannel": "1009390158090616873"
     },
     {
       "name": "duli",
+      "zh-name": "都歷",
       "url": "https://swelleye.com/surf-spots/duli/",
-      "discordChannel": "948490999221608448"
+      "discordChannel": "1009390158090616873"
     },
     {
       "name": "donghe",
+      "zh-name": "東河",
       "url": "https://swelleye.com/surf-spots/donghe/",
-      "discordChannel": "948491048395612190"
+      "discordChannel": "1009390158090616873"
     },
     {
       "name": "jinzun",
+      "zh-name": "金樽",
       "url": "https://swelleye.com/surf-spots/jinzun/",
-      "discordChannel": "948491064128466964"
+      "discordChannel": "1009390158090616873"
     },
     {
       "name": "xingchang",
+      "zh-name": "興昌",
       "url": "https://swelleye.com/surf-spots/xingchang/",
-      "discordChannel": "948491092314181662"
+      "discordChannel": "1009390158090616873"
     },
     {
       "name": "dulan",
+      "zh-name": "都蘭",
       "url": "https://swelleye.com/surf-spots/dulan/",
-      "discordChannel": "948491122504790046"
+      "discordChannel": "1009390158090616873"
     },
     {
       "name": "taitung",
+      "zh-name": "台東",
       "url": "https://swelleye.com/surf-spots/taitung/",
-      "discordChannel": "948491181405380628"
+      "discordChannel": "1009390158090616873"
     },
     {
       "name": "jiupeng",
+      "zh-name": "九棚",
       "url": "https://swelleye.com/surf-spots/jiupeng/",
-      "discordChannel": "948491323479056435"
+      "discordChannel": "1009389296890949752"
     },
     {
       "name": "jialeshui",
+      "zh-name": "佳樂水",
       "url": "https://swelleye.com/surf-spots/jialeshui/",
-      "discordChannel": "948491310510252102"
+      "discordChannel": "1009389296890949752"
     },
     {
       "name": "nanwan",
+      "zh-name": "南灣",
       "url": "https://swelleye.com/surf-spots/nanwan/",
-      "discordChannel": "948491295041658880"
+      "discordChannel": "1009389296890949752"
     },
     {
       "name": "sheliao",
+      "zh-name": "射寮",
       "url": "https://swelleye.com/surf-spots/sheliao/",
-      "discordChannel": "948491275659792394"
+      "discordChannel": "1009389296890949752"
     },
     {
       "name": "qijin",
+      "zh-name": "旗津",
       "url": "https://swelleye.com/surf-spots/qijin/",
-      "discordChannel": "948491483894390824"
+      "discordChannel": "1009390322943537273"
     },
     {
       "name": "yuguangdao",
+      "zh-name": "漁光島",
       "url": "https://swelleye.com/surf-spots/yuguangdao/",
-      "discordChannel": "948491437920620554"
+      "discordChannel": "1009390322943537273"
     },
     {
       "name": "sicao-bridge",
+      "zh-name": "四草橋",
       "url": "https://swelleye.com/surf-spots/sicao-bridge/",
-      "discordChannel": "948491458334306354"
+      "discordChannel": "1009390322943537273"
     },
     {
       "name": "shanshui",
+      "zh-name": "山水",
       "url": "https://swelleye.com/surf-spots/shanshui/",
-      "discordChannel": "1002217266408063097"
+      "discordChannel": "1009390209332424785"
     },
     {
       "name": "songbai",
+      "zh-name": "松柏港",
       "url": "https://swelleye.com/surf-spots/songbai/",
-      "discordChannel": "948490329076674641"
+      "discordChannel": "1009390209332424785"
     },
     {
       "name": "waipu",
+      "zh-name": "外埔北堤",
       "url": "https://swelleye.com/surf-spots/waipu/",
-      "discordChannel": "948490309044682772"
+      "discordChannel": "1009390209332424785"
     },
     {
       "name": "zhunan",
+      "zh-name": "竹南",
       "url": "https://swelleye.com/surf-spots/zhunan/",
-      "discordChannel": "948490270670999593"
+      "discordChannel": "1009390209332424785"
     }
   ]
 }
