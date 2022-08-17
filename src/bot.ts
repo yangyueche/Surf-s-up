@@ -24,7 +24,7 @@ type surfSpotData = {
 client.once('ready', async () => {
   console.log('Bot Running...')
   const fetchSwelleyeThenSendEmbed = new CronJob(
-    '00 23 22 * * *',
+    '00 40 00,11 * * *',
     async function () {
       try {
         let surfSpotData: surfSpotData = data.map((surfSpot) => {
@@ -41,6 +41,23 @@ client.once('ready', async () => {
         await webCrawler(surfSpotData)
         await sendSwellEyeEmbed(surfSpotData, client)
         console.log('Forecast Sent!')
+        const chatLobby = client.channels.cache.get(
+          '932175333619286027'
+        ) as TextChannel
+        await chatLobby
+          .send(
+            `📣  @everyone 明天的浪況預報來囉！ 
+> <#1009074553009479710> 
+> <#1009389296890949752> 
+> <#1009389649090842776> 
+> <#1009390158090616873> 
+> <#1009391209191583754> 
+> <#1009390209332424785> 
+> <#1009390322943537273>`
+          )
+          .catch((e) => {
+            throw e
+          })
       } catch (e) {
         console.error(e)
       }
@@ -212,6 +229,6 @@ async function sendSwellEyeEmbed(
           message: 'something went wrong whne sending embed.',
         }
       })
-    console.log(`sent ${surfSpot.zhname}`, sentEmbed.embeds[0].image)
+    await new Promise((resolve) => setTimeout(resolve, 2000))
   }
 }
