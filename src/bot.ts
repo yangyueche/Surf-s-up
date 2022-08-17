@@ -24,7 +24,7 @@ type surfSpotData = {
 client.once('ready', async () => {
   console.log('Bot Running...')
   const fetchSwelleyeThenSendEmbed = new CronJob(
-    '00 00 21 * * *',
+    '00 23 22 * * *',
     async function () {
       try {
         let surfSpotData: surfSpotData = data.map((surfSpot) => {
@@ -146,7 +146,7 @@ async function webCrawler(surfSpotData: surfSpotData) {
         message: 'something went wrong when uploading to s3',
       }
     })
-    console.log(`stored ${surfSpot.name}`)
+
     fs.unlinkSync(
       `./src/static/${moment().format('MMMDoYYh')}${surfSpot.name}.png`
     )
@@ -182,7 +182,7 @@ async function sendSwellEyeEmbed(
     const swellEyeEmbed = new EmbedBuilder()
       .setColor(0x095c47)
       .setTitle(
-        `${moment().add(1, 'days').format('MMM Do')} ${surfSpot.zhname} 預報：`
+        `${moment().add(1, 'days').format('MMM Do')} ${surfSpot.zhname}預報：`
       )
       .setURL(surfSpot.url)
       .setAuthor({
@@ -201,15 +201,17 @@ async function sendSwellEyeEmbed(
           'https://swelleye.com/av/img/opengraph-3dee2d0f576b24c52d55.png',
       })
 
-    await channel
+    const sentEmbed = await channel
       .send({
         embeds: [swellEyeEmbed],
       })
       .catch((e) => {
+        console.error(e)
         throw {
           name: 'errorOnSendEmbed',
           message: 'something went wrong whne sending embed.',
         }
       })
+    console.log(`sent ${surfSpot.zhname}`, sentEmbed.embeds[0].image)
   }
 }
