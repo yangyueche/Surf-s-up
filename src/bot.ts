@@ -24,7 +24,7 @@ type surfSpotData = {
 client.once('ready', async () => {
   console.log('Bot Running...')
   const fetchSwelleyeThenSendEmbed = new CronJob(
-    '00 40 00,11 * * *',
+    '00 40 11 * * *',
     async function () {
       try {
         let surfSpotData: surfSpotData = data.map((surfSpot) => {
@@ -46,7 +46,7 @@ client.once('ready', async () => {
         ) as TextChannel
         await chatLobby
           .send(
-            `📣  @everyone 明天的浪況預報來囉！ 
+            `📣  @everyone 明天的浪況預報已傳送至➡️ 
 > <#1009074553009479710> 
 > <#1009389296890949752> 
 > <#1009389649090842776> 
