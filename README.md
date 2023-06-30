@@ -1,11 +1,30 @@
-# Discord Bot made for surfers
+# Surfs-Up Discord Bot
 
-As a surfer, we check weather, wind, and tide everyday, and browse through different chat groups to see what's the wave condition of the day.
+Surfs-Up is a Discord bot crafted with passion for surfers. Leveraging Discord.js, TypeScript, and Heroku, it helps surfers access daily weather, wind, and tide information, along with real-time wave conditions. Automated web crawling collects all necessary details and sends it to the specific discord channels corresponding to different locations.
 
-So I wrote a discord bot which is scheduled everyday to web-crawl all the information we need, and send it to different channels according to the location everyday.
+![Surf's Up Screenshot](public/images/CleanShot%202023-01-16%20at%2020.40.37.png)
 
-Examples:
-![image](public/images/CleanShot%202023-01-16%20at%2020.40.37.png)  
-Link to the discord server.  
-https://discord.gg/uSNxZ6RrvE  
-If you are having any issue, or any function you would like to add, please feel free to contact me.
+## Features
+
+- Daily weather, wind, and tide updates.
+- Real-time wave condition reports.
+- Location-specific updates sent to different discord channels.
+- Facilitates interaction and engagement within the surfer community.
+
+## Issues and Contributions
+
+For any issues, feature requests, or contributions, feel free to contact us or open a pull request.
+
+## License
+
+ISC License
+
+## Dependencies
+
+- Discord.js
+- TypeScript
+- Heroku
+- Puppeteer for web-crawling
+- Other dependencies: cron, moment, wokcommands, dotenv, and more.
+
+Run `yarn` or `npm install` to install all dependencies.
